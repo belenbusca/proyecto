@@ -9,15 +9,16 @@ import org.springframework.stereotype.Service;
 import edu.coderhouse.proyecto.Repository.InvoiceDetailRepository;
 import edu.coderhouse.proyecto.entity.Invoice;
 import edu.coderhouse.proyecto.entity.InvoiceDetail;
+import edu.coderhouse.proyecto.requestsPostInvoice.DetailRequest;
 
 @Service
 public class InvoiceDetailService {
     @Autowired
     private InvoiceDetailRepository invoiceDetailRepository;
     
-    //invoiceDetailService.save(invoice.getInvoiceDetails(), invoiceSaved.getId());
-    public void save(List<InvoiceDetail> details, Invoice invoiceSaved){
-        for (InvoiceDetail detail : details) {
+    //invoiceDetailService.save(invoice.getInvoiceDetails(), invoiceSaved);
+    public void save(List<DetailRequest> details, Invoice invoiceSaved){
+        for (DetailRequest detail : details) {
 			InvoiceDetail invoiceDetailBuilt = new InvoiceDetail();
             invoiceDetailBuilt.setInvoice(invoiceSaved);
             invoiceDetailBuilt.setProduct(detail.getProduct());
