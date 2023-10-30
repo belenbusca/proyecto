@@ -1,4 +1,4 @@
-package edu.coderhouse.jpa.service;
+package edu.coderhouse.proyecto.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -12,12 +12,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 
-import edu.coderhouse.jpa.Repository.InoviceRepository;
-import edu.coderhouse.jpa.Repository.ProductRepository;
-import edu.coderhouse.jpa.entity.Client;
-import edu.coderhouse.jpa.entity.Invoice;
-import edu.coderhouse.jpa.entity.InvoiceDetail;
-import edu.coderhouse.jpa.entity.WorldClock;
+import edu.coderhouse.proyecto.Repository.InoviceRepository;
+import edu.coderhouse.proyecto.Repository.ProductRepository;
+import edu.coderhouse.proyecto.entity.Client;
+import edu.coderhouse.proyecto.entity.Invoice;
+import edu.coderhouse.proyecto.entity.InvoiceDetail;
+import edu.coderhouse.proyecto.entity.WorldClock;
 
 @Service
 public class InvoiceService {

@@ -1,4 +1,4 @@
-package edu.coderhouse.jpa.entity;
+package edu.coderhouse.proyecto.entity;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;

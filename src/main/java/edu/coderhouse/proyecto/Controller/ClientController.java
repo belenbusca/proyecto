@@ -1,4 +1,4 @@
-package edu.coderhouse.jpa.Controller;
+package edu.coderhouse.proyecto.Controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import edu.coderhouse.jpa.entity.Client;
-import edu.coderhouse.jpa.service.ClientService;
+import edu.coderhouse.proyecto.entity.Client;
+import edu.coderhouse.proyecto.service.ClientService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;

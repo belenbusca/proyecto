@@ -1,4 +1,4 @@
-package edu.coderhouse.jpa.service;
+package edu.coderhouse.proyecto.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,8 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import edu.coderhouse.jpa.Repository.ProductRepository;
-import edu.coderhouse.jpa.entity.Product;
+import edu.coderhouse.proyecto.Repository.ProductRepository;
+import edu.coderhouse.proyecto.entity.Product;
 
 @Service
 public class ProductService {

@@ -1,4 +1,4 @@
-package edu.coderhouse.jpa.Controller;
+package edu.coderhouse.proyecto.Controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import edu.coderhouse.jpa.entity.InvoiceDetail;
-import edu.coderhouse.jpa.service.InvoiceDetailService;
+import edu.coderhouse.proyecto.entity.InvoiceDetail;
+import edu.coderhouse.proyecto.service.InvoiceDetailService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;

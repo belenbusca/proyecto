@@ -1,4 +1,4 @@
-package edu.coderhouse.jpa.entity;
+package edu.coderhouse.proyecto.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

@@ -1,4 +1,4 @@
-package edu.coderhouse.jpa.service;
+package edu.coderhouse.proyecto.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,9 +6,9 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import edu.coderhouse.jpa.Repository.InvoiceDetailRepository;
-import edu.coderhouse.jpa.entity.Invoice;
-import edu.coderhouse.jpa.entity.InvoiceDetail;
+import edu.coderhouse.proyecto.Repository.InvoiceDetailRepository;
+import edu.coderhouse.proyecto.entity.Invoice;
+import edu.coderhouse.proyecto.entity.InvoiceDetail;
 
 @Service
 public class InvoiceDetailService {

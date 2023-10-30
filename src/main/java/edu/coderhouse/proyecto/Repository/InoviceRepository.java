@@ -1,11 +1,11 @@
-package edu.coderhouse.jpa.Repository;
+package edu.coderhouse.proyecto.Repository;
 
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import edu.coderhouse.jpa.entity.Invoice;
+import edu.coderhouse.proyecto.entity.Invoice;
 
 
 @Repository
