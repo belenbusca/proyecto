@@ -106,7 +106,7 @@ public class Invoice {
 		return detail;
 	}
 
-	public InvoiceDetail removeLinea(InvoiceDetail detail) { // o hago void y no las devuelve TODO!!!
+	public InvoiceDetail removeLinea(InvoiceDetail detail) { // o hago void y no las devuelve !!!
 		getInvoiceDetails().remove(detail);
 		detail.setInvoice(null);
         return detail;
