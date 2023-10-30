@@ -23,7 +23,7 @@ public class InvoiceRequest {
         this.client = client;
     }
 
-    public List<DetailRequest> getDetails() {
+    public List<DetailRequest> getInvoiceDetails() {
         return details;
     }
 

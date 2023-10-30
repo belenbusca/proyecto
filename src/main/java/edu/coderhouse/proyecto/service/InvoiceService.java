@@ -18,6 +18,8 @@ import edu.coderhouse.proyecto.entity.Client;
 import edu.coderhouse.proyecto.entity.Invoice;
 import edu.coderhouse.proyecto.entity.InvoiceDetail;
 import edu.coderhouse.proyecto.entity.WorldClock;
+import edu.coderhouse.proyecto.requestsPostInvoice.DetailRequest;
+import edu.coderhouse.proyecto.requestsPostInvoice.InvoiceRequest;
 
 @Service
 public class InvoiceService {
@@ -44,16 +46,15 @@ public class InvoiceService {
     }
     
     
-    public Invoice save(Invoice invoice) {
+    public Invoice save(InvoiceRequest invoice) {
         Boolean clientExists = clientExists(invoice.getClient());
         Boolean productExists = productExists(invoice.getInvoiceDetails());
         Boolean enoughStock = enoughStock(invoice.getInvoiceDetails());
 
         if(clientExists && productExists && enoughStock) {
-            // actualizar stock y MOSTRARLO
             var invoiceToSave = buildInvoice(invoice);
             updateStock(invoiceToSave.getInvoiceDetails());
-            return inoviceRepository.save(invoice);
+            return inoviceRepository.save(invoiceToSave);
         }
         else if(!clientExists){
             throw new RuntimeException("Client doesnt exist");
@@ -70,8 +71,8 @@ public class InvoiceService {
 		return !opCliente.isEmpty();
     }
 
-    private Boolean productExists(List<InvoiceDetail> details){
-        for (InvoiceDetail detail : details) {
+    private Boolean productExists(List<DetailRequest> details){
+        for (DetailRequest detail : details) {
 			var productoId = detail.getProduct().getId();
 			var opProducto = productService.findProductById(productoId);
 			if (opProducto.isEmpty()) {
@@ -81,8 +82,8 @@ public class InvoiceService {
 		return true;
     }
 
-    private Boolean enoughStock(List<InvoiceDetail> details){
-        for (InvoiceDetail detail : details) {
+    private Boolean enoughStock(List<DetailRequest> details){
+        for (DetailRequest detail : details) {
 			var productId = detail.getProduct().getId();
 			var opProduct = productService.findProductById(productId);
 			if (opProduct.isEmpty()) {
@@ -94,7 +95,7 @@ public class InvoiceService {
 		return true;
     }
 
-    private Invoice buildInvoice(Invoice invoice){
+    private Invoice buildInvoice(InvoiceRequest invoice){
         var invoiceToSave = new Invoice();
         invoiceToSave.setClient(clientService.findClientById(invoice.getClient().getId()).get());
         
